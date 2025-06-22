@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://dcxcw7mtgyyc2"]
+
+[ext_resource type="ArrayMesh" uid="uid://llpnthp2x6k" path="res://Assets/IndustrialEnv/Vent_B.obj" id="1_eki0f"]
+[ext_resource type="Texture2D" uid="uid://da6vnyfo5x1ld" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Ventilation_2.png" id="2_e7qa1"]
+[ext_resource type="PackedScene" uid="uid://cmi4lcbpdioxa" path="res://AssetScenes/blade.tscn" id="3_e7qa1"]
+[ext_resource type="Script" uid="uid://d6j5yoecmyna" path="res://WorldScripts/rotate_object.gd" id="3_id4ux"]
+[ext_resource type="AudioStream" uid="uid://caftffmd4ersv" path="res://Assets/SFX/Ambience/Vent_airflow.wav" id="5_80y32"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23b6s"]
+albedo_texture = ExtResource("2_e7qa1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eki0f"]
+size = Vector3(1.59375, 1.61328, 0.282227)
+
+[node name="VentB" type="MeshInstance3D" node_paths=PackedStringArray("object_to_rotate")]
+mesh = ExtResource("1_eki0f")
+surface_material_override/0 = SubResource("StandardMaterial3D_23b6s")
+script = ExtResource("3_id4ux")
+speed = 1.3
+object_to_rotate = NodePath("Blade")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0146484, 0.015625, 0.0268555)
+shape = SubResource("BoxShape3D_eki0f")
+
+[node name="Blade" parent="." instance=ExtResource("3_e7qa1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157283)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_80y32")
+volume_db = -8.0
+pitch_scale = 0.9
+autoplay = true
+max_distance = 10.0
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="."]
+aabb = AABB(-0.860115, -0.872416, -0.0868766, 1.72023, 1.74483, 0.173753)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ktkvem0y3ack"]
+
+[ext_resource type="ArrayMesh" uid="uid://b5il30j76nq6c" path="res://Assets/IndustrialEnv/Road_Curve_Large.obj" id="1_daroa"]
+[ext_resource type="Texture2D" uid="uid://bdk4mm222ic5g" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Road.png" id="2_ehqi3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guwix"]
+albedo_texture = ExtResource("2_ehqi3")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_daroa"]
+points = PackedVector3Array(-10, 0.091802, -10, -10, -0.09182, -8.47103, -10, 0.091802, -0.00195789, -0.00195885, 0.09182, 10, 9.92756, 0.09182, 8.16758, -8.15388, 0.091802, -9.91582, -10, -0.09182, -1.53093, -8.29483, -0.09182, -8.39272, 1.52897, -0.09182, 10, 1.52897, 0.09182, 10, 9.99804, 0.09182, 9.99804, 8.40446, -0.09182, 8.30854, 9.67306, 0.091802, 6.33516, 9.2502, 0.091802, 4.53602, 8.66288, 0.091802, 2.78387, 7.91504, 0.091802, 1.0924, 7.01645, 0.091802, -0.52271, 5.97103, 0.091802, -2.04777, 4.79052, 0.091802, -3.47103, 3.48277, 0.091802, -4.77682, 2.06147, 0.091802, -5.95928, 0.534455, 0.091802, -7.00274, -1.0787, 0.091802, -7.90329, -2.77017, 0.091802, -8.64918, -4.52428, 0.091802, -9.23649, -6.32342, 0.091802, -9.66132, -6.60533, -0.09182, -8.15583, 8.46907, -0.09182, 9.99804, 8.16954, -0.09182, 6.61707, 7.778, -0.09182, 4.95497, 7.23571, -0.09182, 3.33594, 6.54659, -0.09182, 1.77369, 5.71457, -0.09182, 0.281911, 4.74941, -0.09182, -1.12568, 3.65897, -0.09182, -2.43931, 2.45301, -0.09182, -3.64722, 1.13939, -0.09182, -4.73767, -0.270165, -0.09182, -5.70282, -1.76194, -0.09182, -6.53289, -3.3242, -0.09182, -7.222, -4.94323, -0.09182, -7.76625)
+
+[node name="RoadCurveLarge" type="MeshInstance3D" groups=["RoadSFX"]]
+mesh = ExtResource("1_daroa")
+surface_material_override/0 = SubResource("StandardMaterial3D_guwix")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, -8.74228e-08, 0, -1, 0, 8.74228e-08, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_daroa")

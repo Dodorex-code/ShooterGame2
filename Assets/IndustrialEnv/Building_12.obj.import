@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hov2ps1aib8x"
+path="res://.godot/imported/Building_12.obj-81a279855aa730b10e9e578c21ebf0dd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Building_12.obj-81a279855aa730b10e9e578c21ebf0dd.mesh"]
+
+source_file="res://Assets/IndustrialEnv/Building_12.obj"
+dest_files=["res://.godot/imported/Building_12.obj-81a279855aa730b10e9e578c21ebf0dd.mesh", "res://.godot/imported/Building_12.obj-81a279855aa730b10e9e578c21ebf0dd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

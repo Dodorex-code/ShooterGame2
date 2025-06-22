@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cisurkwiur7xh"]
+
+[ext_resource type="ArrayMesh" uid="uid://b4j4dxmksm2t7" path="res://Assets/IndustrialEnv/Bags_B.obj" id="1_7pdmo"]
+[ext_resource type="Texture2D" uid="uid://b7sgmiucyw4p3" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Bags.png" id="2_ihnw0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jhcct"]
+albedo_texture = ExtResource("2_ihnw0")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_axlga"]
+data = PackedVector3Array(-1.2471, 2.495, -0.7607, -1.2471, -0.0397, -0.7607, 1.2506, 2.495, -0.7607, 1.2506, 2.495, -0.7607, -1.2471, -0.0397, -0.7607, 1.2506, -0.0397, -0.7607, 1.2506, 2.495, -0.7607, 1.2506, 2.495, 0.8424, -1.2471, 2.495, -0.7607, -1.2471, 2.495, -0.7607, 1.2506, 2.495, 0.8424, -1.2471, 2.495, 0.8424, 1.2506, -0.0397, 0.8424, 1.2506, 2.495, 0.8424, 1.2506, -0.0397, -0.7607, 1.2506, -0.0397, -0.7607, 1.2506, 2.495, 0.8424, 1.2506, 2.495, -0.7607, 1.2506, 2.495, 0.8424, 1.2506, -0.0397, 0.8424, -1.2471, 2.495, 0.8424, -1.2471, 2.495, 0.8424, 1.2506, -0.0397, 0.8424, -1.2471, -0.0397, 0.8424, -1.2471, -0.0397, -0.7607, -1.2471, 2.495, -0.7607, -1.2471, -0.0397, 0.8424, -1.2471, -0.0397, 0.8424, -1.2471, 2.495, -0.7607, -1.2471, 2.495, 0.8424, 1.2506, -0.0397, 0.8424, 1.2506, -0.0397, -0.7607, -1.2471, -0.0397, 0.8424, -1.2471, -0.0397, 0.8424, 1.2506, -0.0397, -0.7607, -1.2471, -0.0397, -0.7607)
+
+[node name="BagsB" type="MeshInstance3D" groups=["ClothSFX"]]
+mesh = ExtResource("1_7pdmo")
+surface_material_override/0 = SubResource("StandardMaterial3D_jhcct")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_axlga")

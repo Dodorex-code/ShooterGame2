@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://coc5jj5d8iko3"]
+
+[ext_resource type="Script" uid="uid://bmdto8wse8t7d" path="res://WorldScripts/damage_box.gd" id="1_ren6d"]
+[ext_resource type="AudioStream" uid="uid://cljnluosek3e0" path="res://Assets/SFX/lightning.wav" id="2_kjttw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p41x6"]
+size = Vector3(3, 3, 3)
+
+[node name="DamageBox" type="Node3D"]
+script = ExtResource("1_ren6d")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_p41x6")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_kjttw")
+volume_db = 8.0
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

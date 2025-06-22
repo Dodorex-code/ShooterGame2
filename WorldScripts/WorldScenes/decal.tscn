@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://btueakfigvpbg"]
+
+[ext_resource type="Texture2D" uid="uid://bl7powfp12ht5" path="res://Assets/Textures/Horror_Stain_10-512x512.png" id="1_lgepb"]
+
+[node name="Decal" type="Decal"]
+texture_albedo = ExtResource("1_lgepb")

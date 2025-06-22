@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://fpvp3p5qxchv"
+path="res://.godot/imported/Bridges_Stairs_A.obj-2303ba53a6969f3b2d9def75a84c7d76.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bridges_Stairs_A.obj-2303ba53a6969f3b2d9def75a84c7d76.mesh"]
+
+source_file="res://Assets/IndustrialEnv/Bridges_Stairs_A.obj"
+dest_files=["res://.godot/imported/Bridges_Stairs_A.obj-2303ba53a6969f3b2d9def75a84c7d76.mesh", "res://.godot/imported/Bridges_Stairs_A.obj-2303ba53a6969f3b2d9def75a84c7d76.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

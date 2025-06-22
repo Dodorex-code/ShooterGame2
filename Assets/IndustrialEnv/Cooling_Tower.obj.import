@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bm8k8wpkmrjeu"
+path="res://.godot/imported/Cooling_Tower.obj-6a8bae50e2e356c8a440209bb63cd7cc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cooling_Tower.obj-6a8bae50e2e356c8a440209bb63cd7cc.mesh"]
+
+source_file="res://Assets/IndustrialEnv/Cooling_Tower.obj"
+dest_files=["res://.godot/imported/Cooling_Tower.obj-6a8bae50e2e356c8a440209bb63cd7cc.mesh", "res://.godot/imported/Cooling_Tower.obj-6a8bae50e2e356c8a440209bb63cd7cc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

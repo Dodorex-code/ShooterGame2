@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cgns1v76a0e6r"
+path="res://.godot/imported/Gravel - Run.wav-029a9fed2e5a4827b3b265e9e5e69366.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Footsteps/Gravel - Run.wav"
+dest_files=["res://.godot/imported/Gravel - Run.wav-029a9fed2e5a4827b3b265e9e5e69366.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,36 @@
+Settings:
+- industrial zone
+- night
+Characters:
+- Player (Malev or Sabrina)
+    - doesen't say a lot
+    - allways first person
+- Ivan
+    - cold and brutal
+    - focused on the job
+- Mary
+    - arrogant
+    - verry skilled
+Story:
+You play as a vampire (either Malev or Sabrina) and with your two vampire companions Ivan and Mary you form the dark council of East-Ashur. As such it is your duty to ensure a steady suppy of human victims for blood harvesting and ritual
+sacrifice. Usually humans are verry succeptable to vampire trickery due to the energie of the sanctuary of death. This sanctuary was destroyed and an industrial zone built ontop of it's ruins. Since the sanctuary is fairly far away it went
+unnoticed for around 45 years. But now the matter is urgent. You three are on a mission to destroy the industrial zone and tempoarily rebuild the sanctuary until the high vampire council decies how to continue. On your journey you have to rely on human technology more than you would like to since your powers are weakend due to the destruction of the sanctuary. At one point Ivan goes too far with the brutality and is looked down upon because he wouldn't acknowledge that he went too far until he is later beaten up and learns that the only reason he is not hurt more than he is, is that some enemy was somewhat mercyful. That is his character development. Mary is jealous of your position in the dark council as she thinks that she should be the sole council vampire since she is the best in combat. This is only reinforced by her having to help you out right at the beginning of the game. She only learns that she can't do it all by herself, when you need to rescue her nearing the end of the game. This is her character development. The game ends in the temporary reconstruction of the sanctuary and you three heading of into the sunrise.
+
+To explain why all the enemies have guns Ivan sais that a delivery of weapons came here and to be aware of that.
+Gameplay:
+Systems:
+- shooting:
+    - pistol
+    - shotgun
+- flying:
+    - fly for a few seconds as a bat
+- suck human blood from behind, silently killing them
+- health regen
+- Enemies move to position and attack ranged or melee
+Style:
+- dark ambient
+- industrial
+- melancholic
+- mysterious
+- slow with intensitiy spikes
+- moral ambiguity (the vampires are killing a bunch of innocent humans after all)

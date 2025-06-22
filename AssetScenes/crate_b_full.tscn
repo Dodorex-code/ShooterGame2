@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1wqc1ok40q8l"]
+
+[ext_resource type="ArrayMesh" uid="uid://vkertl35iixc" path="res://Assets/IndustrialEnv/Crate_B_Full.obj" id="1_ii8wa"]
+[ext_resource type="Texture2D" uid="uid://lyhvylhajjmg" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Cargo_2.png" id="2_4xr2w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_otful"]
+albedo_texture = ExtResource("2_4xr2w")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rywph"]
+data = PackedVector3Array(-4.0604, -0.0809, 1.4893, 3.9396, -0.0809, 1.4893, -4.0604, -0.0809, -1.5107, -4.0604, -0.0809, -1.5107, 3.9396, -0.0809, 1.4893, 3.9396, -0.0809, -1.5107, -4.0604, -0.0809, 1.4893, -4.0604, -0.0809, -1.5107, -4.0604, 2.9191, 1.4893, -4.0604, 2.9191, 1.4893, -4.0604, -0.0809, -1.5107, -4.0604, 2.9191, -1.5107, -4.0604, -0.0809, -1.5107, 3.9396, -0.0809, -1.5107, -4.0604, 2.9191, -1.5107, -4.0604, 2.9191, -1.5107, 3.9396, -0.0809, -1.5107, 3.9396, 2.9191, -1.5107, 3.9396, -0.0809, 1.4893, -4.0604, -0.0809, 1.4893, 3.9396, 2.9191, 1.4893, 3.9396, 2.9191, 1.4893, -4.0604, -0.0809, 1.4893, -4.0604, 2.9191, 1.4893, 3.9396, 2.9191, 1.4893, -4.0604, 2.9191, 1.4893, 3.9396, 2.9191, -1.5107, 3.9396, 2.9191, -1.5107, -4.0604, 2.9191, 1.4893, -4.0604, 2.9191, -1.5107, 3.9396, -0.0809, 1.4893, 3.9396, 2.9191, 1.4893, 3.9396, -0.0809, -1.5107, 3.9396, -0.0809, -1.5107, 3.9396, 2.9191, 1.4893, 3.9396, 2.9191, -1.5107)
+
+[node name="CrateBFull" type="MeshInstance3D" groups=["MetalSFX"]]
+mesh = ExtResource("1_ii8wa")
+surface_material_override/0 = SubResource("StandardMaterial3D_otful")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rywph")

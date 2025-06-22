@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctu0j87eyqnyb"]
+
+[ext_resource type="ArrayMesh" uid="uid://u0g8aoi86wvn" path="res://Assets/IndustrialEnv/Fence_Mesh.obj" id="1_saks8"]
+[ext_resource type="Texture2D" uid="uid://n526bs4whm1v" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Fence.png" id="2_smdqj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23b6s"]
+transparency = 1
+albedo_texture = ExtResource("2_smdqj")
+distance_fade_mode = 3
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lxxrg"]
+data = PackedVector3Array(0, 0.9786, 0.0156, 0, -0.4556, 0.0156, 0, 0.9786, 2.8206, 0, 0.9786, 2.8206, 0, -0.4556, 0.0156, 0, -0.4556, 2.8206, 0, -0.4556, 0.0156, 0, 0.9786, 0.0156, 0, -0.4556, 2.8206, 0, -0.4556, 2.8206, 0, 0.9786, 0.0156, 0, 0.9786, 2.8206)
+
+[node name="FenceMesh" type="MeshInstance3D"]
+mesh = ExtResource("1_saks8")
+surface_material_override/0 = SubResource("StandardMaterial3D_23b6s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_lxxrg")

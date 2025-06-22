@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmjrk6ymxuii6"]
+
+[ext_resource type="Texture2D" uid="uid://dbfiaxegknv8k" path="res://Assets/Textures/paper.jpg" id="1_ipx4n"]
+[ext_resource type="Script" uid="uid://dc0jorcncv7hh" path="res://UI/enemy_deathnote.gd" id="1_ud52e"]
+[ext_resource type="FontFile" uid="uid://hgaxqi83h3y5" path="res://Assets/Fonts/Bauhaus 93 Regular.ttf" id="2_niwui"]
+
+[node name="EnemyDeathnote" type="CanvasLayer"]
+script = ExtResource("1_ud52e")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 2364.0
+offset_bottom = 3450.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+pivot_offset = Vector2(480, 150)
+texture = ExtResource("1_ipx4n")
+
+[node name="NameLabel" type="Label" parent="Control"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 160.0
+offset_right = 125.0
+offset_bottom = 187.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.458824, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_niwui")
+theme_override_font_sizes/font_size = 23
+text = "Default enemy name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TextLabel" type="Label" parent="Control"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 200.0
+offset_right = 125.0
+offset_bottom = 447.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.162066, 0.162066, 0.162066, 1)
+theme_override_fonts/font = ExtResource("2_niwui")
+theme_override_font_sizes/font_size = 21
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas."
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 129.0
+offset_top = 135.0
+offset_right = 146.0
+offset_bottom = 165.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_niwui")
+theme_override_font_sizes/font_size = 18
+text = "X"
+flat = true
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

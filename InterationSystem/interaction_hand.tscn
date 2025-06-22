@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0g4ancleria1"]
+
+[ext_resource type="Script" uid="uid://b7sf35kleb55c" path="res://InterationSystem/interaction_hand.gd" id="1_vjear"]
+
+[node name="InteractionHand" type="RayCast3D"]
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
+script = ExtResource("1_vjear")

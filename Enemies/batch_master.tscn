@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://onry1tv462qc"]
+
+[ext_resource type="Script" uid="uid://pciqwbqup4ga" path="res://Enemies/batch_master.gd" id="1_sgsuj"]
+
+[node name="BatchMaster" type="Node3D"]
+script = ExtResource("1_sgsuj")

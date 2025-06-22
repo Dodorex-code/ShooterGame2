@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc2hchmpoug5w"]
+
+[ext_resource type="ArrayMesh" uid="uid://daqga3viv4pa4" path="res://Assets/IndustrialEnv/Supportbeam_C.obj" id="1_bgf3j"]
+[ext_resource type="Texture2D" uid="uid://dwxvvvusei7vf" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Bridges.png" id="2_hmlg3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ym1h"]
+albedo_texture = ExtResource("2_hmlg3")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4w38b"]
+data = PackedVector3Array(-0.0505, 5.141, -0.2694, -0.0505, 0.2204, -0.2694, 0.0777, 5.1411, -0.2694, 0.0777, 5.1411, -0.2694, -0.0505, 0.2204, -0.2694, 0.0777, 0.2204, -0.2694, -0.0505, 5.141, 0.3215, -0.0505, 0.2204, 0.3215, -0.0505, 5.141, -0.2694, -0.0505, 5.141, -0.2694, -0.0505, 0.2204, 0.3215, -0.0505, 0.2204, -0.2694, 0.0777, 5.141, 0.3215, 0.0777, 0.2204, 0.3215, -0.0505, 5.141, 0.3215, -0.0505, 5.141, 0.3215, 0.0777, 0.2204, 0.3215, -0.0505, 0.2204, 0.3215, 0.0777, 5.141, 0.3215, 0.0777, 5.1411, -0.2694, 0.0777, 0.2204, 0.3215, 0.0777, 0.2204, 0.3215, 0.0777, 5.1411, -0.2694, 0.0777, 0.2204, -0.2694, -0.4162, 0.2249, 0.4609, -0.4162, 0.2249, -0.393, 0.4435, 0.2249, 0.4609, 0.4435, 0.2249, 0.4609, -0.4162, 0.2249, -0.393, 0.4435, 0.2249, -0.393, -0.4162, -0.0337, 0.4609, -0.4162, -0.0337, -0.393, -0.4162, 0.2249, 0.4609, -0.4162, 0.2249, 0.4609, -0.4162, -0.0337, -0.393, -0.4162, 0.2249, -0.393, 0.4435, -0.0337, -0.393, 0.4435, -0.0337, 0.4609, 0.4435, 0.2249, -0.393, 0.4435, 0.2249, -0.393, 0.4435, -0.0337, 0.4609, 0.4435, 0.2249, 0.4609, 0.4435, 0.2249, -0.393, -0.4162, 0.2249, -0.393, 0.4435, -0.0337, -0.393, 0.4435, -0.0337, -0.393, -0.4162, 0.2249, -0.393, -0.4162, -0.0337, -0.393, -0.4162, 0.2249, 0.4609, 0.4435, 0.2249, 0.4609, -0.4162, -0.0337, 0.4609, -0.4162, -0.0337, 0.4609, 0.4435, 0.2249, 0.4609, 0.4435, -0.0337, 0.4609)
+
+[node name="SupportbeamC" type="MeshInstance3D" groups=["MetalSFX"]]
+mesh = ExtResource("1_bgf3j")
+surface_material_override/0 = SubResource("StandardMaterial3D_3ym1h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_4w38b")

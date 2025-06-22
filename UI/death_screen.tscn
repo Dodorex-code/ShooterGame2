@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://bggdd48jvm7ti"]
+
+[ext_resource type="FontFile" uid="uid://ddfl8sjigk6wf" path="res://Assets/Fonts/BAUHS93.ttf" id="1_ls05l"]
+[ext_resource type="Script" uid="uid://l0wl3p3yelc3" path="res://UI/death_screen.gd" id="1_n1nej"]
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n1nej")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.74902, 0.0156863, 0.0901961, 0.0509804)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -371.0
+offset_top = -81.0
+offset_right = 369.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.397482, 4.57242e-07, 1.68458e-07, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.580392)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("1_ls05l")
+theme_override_font_sizes/font_size = 70
+text = "You died of whatever"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = 122.0
+offset_right = 89.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.47451, 0, 0, 1)
+theme_override_colors/font_color = Color(0.396078, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.647059, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_ls05l")
+theme_override_font_sizes/font_size = 40
+text = "Try Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

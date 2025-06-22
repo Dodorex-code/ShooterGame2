@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ggqn0efa76kv"]
+
+[ext_resource type="Script" uid="uid://bv4w3sfmq6t57" path="res://WorldScripts/distant_lightning.gd" id="1_m7vbs"]
+[ext_resource type="AudioStream" uid="uid://cljnluosek3e0" path="res://Assets/SFX/lightning.wav" id="2_8cqx6"]
+
+[node name="DistantLightning" type="Node3D"]
+script = ExtResource("1_m7vbs")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_8cqx6")
+volume_db = 3.0
+max_distance = 4096.0

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh20qb0lm8a2m"]
+
+[ext_resource type="ArrayMesh" uid="uid://dvkxmvyj4pw2u" path="res://Assets/IndustrialEnv/Road_Straight_Long.obj" id="1_b1rvv"]
+[ext_resource type="Texture2D" uid="uid://bdk4mm222ic5g" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Road.png" id="2_vrx33"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guwix"]
+albedo_texture = ExtResource("2_vrx33")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b1rvv"]
+points = PackedVector3Array(4.99902, 0.091802, 10, 3.46907, -0.09182, 10, 4.99902, 0.091802, -10, -3.47103, 0.09182, -10, -5, 0.091802, 10, -3.47103, -0.09182, 10, 3.46907, -0.09182, -10, -5, 0.09182, -10, -3.47103, -0.09182, -10)
+
+[node name="RoadStraightLong" type="MeshInstance3D" groups=["RoadSFX"]]
+mesh = ExtResource("1_b1rvv")
+surface_material_override/0 = SubResource("StandardMaterial3D_guwix")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_b1rvv")

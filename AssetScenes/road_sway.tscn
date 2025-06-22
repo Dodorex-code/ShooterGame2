@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c87ef1plqxbnf"]
+
+[ext_resource type="ArrayMesh" uid="uid://bt6likbweoqrs" path="res://Assets/IndustrialEnv/Road_Sway.obj" id="1_3beq3"]
+[ext_resource type="Texture2D" uid="uid://bdk4mm222ic5g" path="res://Assets/IndustrialEnv/Industrial_exterior_v2_Road.png" id="2_s42nm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guwix"]
+albedo_texture = ExtResource("2_s42nm")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3beq3"]
+points = PackedVector3Array(-10, 0.091803, -10, -8.47103, -0.091821, -10, -8.0834, -0.091821, -7.6899, -9.54386, 0.091803, -7.47259, -0.00195789, 0.091803, -10, -1.53093, -0.091821, -10, -8.72553, 0.091803, -5.08418, -7.31989, -0.091821, -5.47572, 7.63508, 0.091803, 2.83868, 6.27056, -0.091821, 3.35944, -7.63704, 0.091803, -2.84064, -6.27252, -0.091821, -3.36335, 8.72357, 0.091803, 5.08222, 7.31793, -0.091821, 5.47377, 1.52897, -0.091821, 10, -0.00195789, 0.091803, 9.99804, 9.5419, 0.091803, 7.47063, 8.07948, -0.091821, 7.68794, 8.46907, -0.091821, 10, 1.52897, 0.091803, 10, 9.99804, 0.091803, 9.99804, 8.46907, 0.091803, 10)
+
+[node name="RoadSway" type="MeshInstance3D"]
+mesh = ExtResource("1_3beq3")
+surface_material_override/0 = SubResource("StandardMaterial3D_guwix")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_3beq3")

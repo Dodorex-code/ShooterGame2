@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://be8kpvhom5lp3"]
+
+[ext_resource type="Script" uid="uid://d0kr7xuymq7bi" path="res://Enemies/enemy.gd" id="1_3ih25"]
+[ext_resource type="Script" uid="uid://b0m4fgrpbqoj3" path="res://InterationSystem/interactable.gd" id="2_bxkaj"]
+[ext_resource type="Script" uid="uid://b7sf35kleb55c" path="res://InterationSystem/interaction_hand.gd" id="3_47qgu"]
+[ext_resource type="PackedScene" uid="uid://dmjrk6ymxuii6" path="res://UI/enemy_deathnote.tscn" id="4_572h1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_chnrf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chnrf"]
+albedo_color = Color(0, 0.619608, 1, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3ih25"]
+
+[node name="Enemy" type="CharacterBody3D" groups=["Enemy"]]
+script = ExtResource("1_3ih25")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_chnrf")
+surface_material_override/0 = SubResource("StandardMaterial3D_chnrf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3ih25")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="Interactable" type="Node3D" parent="."]
+script = ExtResource("2_bxkaj")
+can_be_interacted_with = false
+metadata/_custom_type_script = "uid://b0m4fgrpbqoj3"
+
+[node name="InteractionHand" type="RayCast3D" parent="."]
+script = ExtResource("3_47qgu")
+is_for_player = false
+metadata/_custom_type_script = "uid://b7sf35kleb55c"
+
+[node name="EnemyDeathnote" parent="." instance=ExtResource("4_572h1")]
+
+[connection signal="on_interact" from="Interactable" to="." method="_on_interactable_on_interact"]
